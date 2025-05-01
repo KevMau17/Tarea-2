@@ -1,0 +1,20 @@
+site_name: Documentación Tarea 2 de Física Computacional
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings
+
+nav:
+  - Índice: index.md
+  - Explicación: explanation.md
+  - Tutorial: tutorials.md
+  - Referencia: reference.md
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
