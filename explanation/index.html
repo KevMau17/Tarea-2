@@ -341,7 +341,7 @@
 
 <h1 id="metodo-de-cuadratura-gaussiana">Método de Cuadratura Gaussiana</h1>
 <p>Uno de los métodos más poderosos para evaluar integrales de forma numérica es la <strong>cuadratura Gaussiana</strong>.</p>
-<p>En esta clase vamos a discutir los resultados más importantes y cómo aplicar la idea de cuadraturas para resolver integrales.</p>
+<p>Vamos a discutir los resultados más importantes y cómo aplicar la idea de cuadraturas para resolver integrales.</p>
 <p>Para derivaciones de resultados ver: Computational Physics - Mark Newman Capítulo 5 y Apéndice C.</p>
 <p>La idea principal está dada por
 \begin{align}
@@ -350,11 +350,7 @@
 donde:
   * <span class="arithmatex">\(w_k\)</span> son los "pesos"
   * <span class="arithmatex">\(x_k\)</span> son los puntos de muestreo</p>
-<p>Para las ecuaciones de Newton-Cotes de la clase anterior:<br />
-  * Los puntos de muestreo son <strong>equidistantes</strong>.
-  * Una ecuación de Newton-Cotes de orden <span class="arithmatex">\(N\)</span> es <em>exacta</em> (i.e., no hay aproximación) para un polinomio de grado <span class="arithmatex">\(N\)</span>.
-  * Un polinomio de orden <span class="arithmatex">\(N\)</span> aproxima una función bien comportada mejor que un polinomio de orden <span class="arithmatex">\(N-1\)</span>, debido al grado de libertad añadido.</p>
-<p>Por el otro lado, para la cuadratura Gaussiana:
+<p>Para la mayoría de métodos los puntos de muestreo son <strong>equidistantes</strong>. Por el otro lado, para la cuadratura Gaussiana:
   * Los puntos de muestreo se escogen de manera tal que <strong>no son equidistantes</strong>. Esto introduce más grados de libertad para la misma discretización en <span class="arithmatex">\(N\)</span> subregiones.
   * Es exacta para un polinomio de orden <span class="arithmatex">\((2N - 1)\)</span>.
   * Es decir, la cuadratura Gaussiana da la misma precisión que un polinomio de orden <span class="arithmatex">\((2N - 1)\)</span>.</p>
