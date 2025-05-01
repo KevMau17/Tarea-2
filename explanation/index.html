@@ -347,17 +347,39 @@
 \begin{align}
 \int_a^b {\rm{d}}x f(x) \approx \sum_{k=1}^{N} w_k f(x_k).
 \end{align}
-donde:
-  * <span class="arithmatex">\(w_k\)</span> son los "pesos"
-  * <span class="arithmatex">\(x_k\)</span> son los puntos de muestreo</p>
-<p>Para la mayoría de métodos los puntos de muestreo son <strong>equidistantes</strong>. Por el otro lado, para la cuadratura Gaussiana:
-  * Los puntos de muestreo se escogen de manera tal que <strong>no son equidistantes</strong>. Esto introduce más grados de libertad para la misma discretización en <span class="arithmatex">\(N\)</span> subregiones.
-  * Es exacta para un polinomio de orden <span class="arithmatex">\((2N - 1)\)</span>.
-  * Es decir, la cuadratura Gaussiana da la misma precisión que un polinomio de orden <span class="arithmatex">\((2N - 1)\)</span>.</p>
-<p>No vamos a probar el siguiente resultado (ver Apéndice C de Newman - Computational Physics), pero de manera muy interesante, existe una <strong>regla universal para escoger <span class="arithmatex">\(w_k\)</span> y <span class="arithmatex">\(x_k\)</span></strong>. Los pesos y puntos de muestreo se eligen tal que:
-  * <span class="arithmatex">\(x_k\)</span> corresponden a las <span class="arithmatex">\(N\)</span> raíces (ceros) de los polinomios de Legendre <span class="arithmatex">\(P_N(x)\)</span> de orden <span class="arithmatex">\(N\)</span>.
-  * Los pesos se eligen tal que:
-      - <span class="arithmatex">\(\displaystyle w_k = \left[\frac{2}{1-x^2}\left(\frac{dP_N}{dx}\right)^{-2}\right]_{x={x_k}}\)</span>, con <span class="arithmatex">\(x_k\)</span> que cumple <span class="arithmatex">\(P_N(x_k)=0\)</span></p>
+donde:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(w_k\)</span> son los "pesos"</p>
+</li>
+<li>
+<p><span class="arithmatex">\(x_k\)</span> son los puntos de muestreo</p>
+</li>
+</ul>
+<p>Para la mayoría de métodos los puntos de muestreo son <strong>equidistantes</strong>. Por el otro lado, para la cuadratura Gaussiana:</p>
+<ul>
+<li>
+<p>Los puntos de muestreo se escogen de manera tal que <strong>no son equidistantes</strong>. Esto introduce más grados de libertad para la misma discretización en <span class="arithmatex">\(N\)</span> subregiones.</p>
+</li>
+<li>
+<p>Es exacta para un polinomio de orden <span class="arithmatex">\((2N - 1)\)</span>.</p>
+</li>
+<li>
+<p>Es decir, la cuadratura Gaussiana da la misma precisión que un polinomio de orden <span class="arithmatex">\((2N - 1)\)</span>.</p>
+</li>
+</ul>
+<p>No vamos a probar el siguiente resultado (ver Apéndice C de Newman - Computational Physics), pero de manera muy interesante, existe una <strong>regla universal para escoger <span class="arithmatex">\(w_k\)</span> y <span class="arithmatex">\(x_k\)</span></strong>. Los pesos y puntos de muestreo se eligen tal que:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(x_k\)</span> corresponden a las <span class="arithmatex">\(N\)</span> raíces (ceros) de los polinomios de Legendre <span class="arithmatex">\(P_N(x)\)</span> de orden <span class="arithmatex">\(N\)</span>.</p>
+</li>
+<li>
+<p>Los pesos se eligen tal que:</p>
+<ul>
+<li><span class="arithmatex">\(\displaystyle w_k = \left[\frac{2}{1-x^2}\left(\frac{dP_N}{dx}\right)^{-2}\right]_{x={x_k}}\)</span>, con <span class="arithmatex">\(x_k\)</span> que cumple <span class="arithmatex">\(P_N(x_k)=0\)</span></li>
+</ul>
+</li>
+</ul>
 <h2 id="polinomios-de-legendre">Polinomios de Legendre</h2>
 <p>Los polinomios de Legendre son un sistema de polinomios ortogonales que pueden ser definidos de manera recursiva. Tenemos:
 \begin{align}
